@@ -41,7 +41,7 @@ namespace TechJobsMVC.Models
             }
             if (Location.Value.Equals("") || Location.Value == null)
             {
-                Location.Value= "Data not available";
+                Location.Value = "Data not available";
             }
             if (CoreCompetency.Value.Equals("") || CoreCompetency.Value == null)
             {

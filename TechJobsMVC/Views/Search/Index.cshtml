@@ -1,8 +1,8 @@
-﻿<div class="container body-content">
+﻿<div>
 
     <h1>@ViewBag.title</h1>
 
-    <form action="/search/results" method="post">
+    <form method="post" action="/Search/Results">
         <h2>Search by:</h2>
 
         <p>
@@ -29,5 +29,37 @@
     @{
         //TODO #4: Loop over the search results to display all job fields.
     }
+    <table class="customstripe">   
+        @if (ViewBag.jobs != null)
+        {
+            @foreach (var item in ViewBag.jobs)
+            {
+                <tr>
+                    <td>Id:</td>
+                    <td>@item.Id</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>@item.Name</td>
+                </tr>
+                <tr>
+                    <td>Employer:</td>
+                    <td>@item.Employer</td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td>@item.Location</td>
+                </tr>     
+                <tr>
+                    <td>Position Type:</td>
+                    <td>@item.PositionType</td>
+                </tr>   
+                <tr>
+                    <td>Skill:</td>
+                    <td>@item.CoreCompetency</td>
+                </tr>
+            }
+          }
+    </table>  
 
 </div>
